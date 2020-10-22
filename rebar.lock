@@ -1,0 +1,8 @@
+[{<<"cowlib">>,
+  {git,"https://github.com/ninenines/cowlib.git",
+       {ref,"6e6c534753943c9f5ffc7332d7f36116a01dd4e4"}},
+  0},
+ {<<"jhn_stdlib">>,
+  {git,"https://github.com/JanHenryNystrom/jhn_stdlib.git",
+       {ref,"4c174c58646e6a37f8f424b7f4b6487333287661"}},
+  0}].
