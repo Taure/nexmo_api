@@ -35,8 +35,8 @@ send(Recipient, Message, UUID) ->
                          {<<"client-ref">>, untag(UUID)}]),
     URL = [<<"https://">>, Server],
     #{body := RespBody} = shttpc:post(URL, Queries, ?POST_OPTS),
-    #{<<"messages">> := Messages} = json:decode(RespBody, [maps]),
-    case Messages of
+    #{<<"messages">> := [RespMessage]} = json:decode(RespBody, [maps]),
+    case RespMessage of
         #{<<"status">> := <<"0">>,
           <<"remaining-balance">> := Balance,
           <<"message-price">> := Price} ->
